@@ -1,69 +1,72 @@
 ﻿/* Reset */
 * {
-     margin: 0;
-     padding:0;
-     box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  text-decoration: none;
  }
-
+ html {
+   font-family: 'Open Sans Condensed', Helvetica, Verdana, Arial, sans-serif;
+   font-size: 21px;
+   background-color: rgb(255, 255, 255);
+}
 body {
-    background-color: white;
-    overflow-x: hidden;
-}
-div.wrapper {
-    display: grid;
-    grid-template-columns: 10vw 15vw 1fr 25vw;  
-    color:gray;
-    font-family:'Gentium Book Basic';
-    font-size:larger;
-}
+  color: gray;
+  font-weight: bold;
+  min-height: 100vh;
 
-menu {
-    grid-column: 1 / 2;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    font-size:x-small;
 }
-menu a {
-    padding: 6px 8px 6px 16px;
-    margin-bottom:6px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    display: block;
-    text-align:center;
+a {
+  color: gray;
 }
-
-
-menu a:hover {
-    color: black;
-    background-color: #ffffff;
+div.page_wrapper {
+  display: grid;
+  grid-template-columns: 10vw 15vw 1fr 25vw;
+  grid-row-gap: 40px;
 }
+nav.left_site_nav {
+  grid-column: 1 / 2;
+  grid-row: 1 / 5;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+}
+#avatar_image {
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+}
+nav.left_site_nav i {
+  padding-top: 20px;
+}
+nav.left_site_nav a:hover {
+  color: white;
+}
 header {
-      grid-row: 1 / 2;
-      grid-column: 3 / 4;
-      text-align:center;
+  font-family: 'Gentium Book Basic';
+  margin: 20px 0 50px;
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  text-align:center;
 }
-.main_section_image {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-    height: auto;
-    max-width: 640px;
-    margin-top: 10%;
+#main_section_image {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
 }
 section.main_section_text {
-     grid-row: 3 / 4;
-     grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
 }
-
-
-
+footer {
+  grid-column: 4;
+  grid-row: 4;
+  color: rgb(0, 0, 0);
+  font-size: .8rem;
+  justify-self: center;
+}
